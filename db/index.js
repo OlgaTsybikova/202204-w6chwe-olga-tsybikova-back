@@ -1,10 +1,10 @@
+require("dotenv").config();
 const chalk = require("chalk");
+const debug = require("debug")("robot-api:db");
 const mongoose = require("mongoose");
-const debug = require("debug")("robots-api:server");
 
 const connectDB = (connectionString) =>
   new Promise((resolve, reject) => {
-    mongoose.set("debug", true);
     mongoose.connect(connectionString, (error) => {
       if (error) {
         debug(chalk.red("ERROR", error.message));
@@ -16,4 +16,4 @@ const connectDB = (connectionString) =>
     });
   });
 
-module.exports = connectDB;
+module.exports = { connectDB };
