@@ -1,9 +1,9 @@
 require("dotenv").config();
 const chalk = require("chalk");
-const debug = require("debug")("robots-api:server");
-const { port } = require("./cli");
-const connectDB = require("./db");
-const initializeServer = require("./server/initializeServer");
+const debug = require("debug")("robot-api:root");
+const { port } = require("./cli/index");
+const { connectDB } = require("./db/index");
+const { initializeServer } = require("./server/initializeServer");
 
 (async () => {
   try {
