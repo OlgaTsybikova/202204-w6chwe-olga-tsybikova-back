@@ -10,11 +10,9 @@
     "nodemon": "^2.0.16"
   },
   "scripts": {
+    "test": "jest --watchAll",
     "prepare": "husky install",
-    "node": "start",
-    "test-coverage": "npm run test -- --coverage --watchAll=false",
-    "type": "module",
-    "start": "node index",
+    "start": "node .",
     "start-dev": "nodemon . -q"
   },
   "dependencies": {
