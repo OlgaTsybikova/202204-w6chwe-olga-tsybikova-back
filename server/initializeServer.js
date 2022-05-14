@@ -1,7 +1,6 @@
 require("dotenv").config();
 const chalk = require("chalk");
 const express = require("express");
-const morgan = require("morgan");
 const debug = require("debug")("robots-api:server");
 
 const app = express();
