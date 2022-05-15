@@ -12,7 +12,7 @@ const initializeServer = (port) => {
   server.on("error", (error) => {
     debug(chalk.blue("There is a problem with your server"));
     if (error.code === "EADDRINUSE") {
-      debug(chalk.red(`Port ${port}busy`));
+      debug(chalk.red(`Port ${port} busy`));
     }
   });
 };
