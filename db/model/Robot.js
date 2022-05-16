@@ -16,10 +16,6 @@ const RobotSchema = new Schema({
   created: {
     type: Number,
   },
-  user: {
-    type: Schema.Types.ObjectId,
-    ref: "User",
-  },
 });
 
 const Robot = model("Robot", RobotSchema, "robots");
