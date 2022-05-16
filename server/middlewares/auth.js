@@ -10,7 +10,7 @@ const auth = (req, res, next) => {
     jwt.verify(token, process.env.JWT_SECRETO);
     next();
   } catch {
-    const customError = new Error("Invalid token");
+    const customError = new Error("Invalid token here");
     customError.statusCode = 401;
     next(customError);
   }
